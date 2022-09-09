@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacground_nen1"
+    tools:context=".HanMucChiTieuFragment">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/xanhngoc"
+        android:text="Hạn Mức Doanh Thu"
+        android:gravity="bottom|center"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="1dp"
+        android:paddingRight="20dp"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:id="@+id/lblTittle"
+        ></TextView>
+    <RelativeLayout
+        android:id="@+id/hmct_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTittle"
+        android:paddingBottom="20dp"
+        >
+
+        <TextView
+            android:id="@+id/hmct_lableLoaiKC"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Loại khoản chi:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/rose"/>
+        <AutoCompleteTextView
+            android:id="@+id/hmct_txtLoaiKC"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_white"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/hmct_lableLoaiKC"
+            android:textSize="8pt"
+            android:hint="Nhập loại khoản chi..."
+            android:gravity="center"
+            android:completionThreshold="1"/>
+
+        <TextView
+            android:id="@+id/hmct_lableKhoanChi"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Khoản chi:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_below="@+id/hmct_lableLoaiKC"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/hmct_txtKhoanChi"
+            android:layout_width="match_parent"
+            android:background="@drawable/background_white"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:layout_toRightOf="@id/hmct_lableLoaiKC"
+            android:textSize="8pt"
+            android:hint="Nhập khoản chi..."
+            android:gravity="center"
+            android:completionThreshold="1"
+            android:layout_below="@+id/hmct_lableLoaiKC" />
+
+        <TextView
+            android:id="@+id/hmct_lableHanMuc"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Hạn mức:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"
+            android:layout_below="@+id/hmct_lableKhoanChi"/>
+
+        <EditText
+            android:id="@+id/hmct_txtHanMuc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_white"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/hmct_lableLoaiKC"
+            android:textSize="8pt"
+            android:hint="Nhập hạn mức..."
+            android:gravity="center"
+            android:layout_below="@+id/hmct_lableKhoanChi"/>
+
+        <TextView
+            android:id="@+id/hmct_lableThoiGian"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Thời gian:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@+id/hmct_lableHanMuc"/>
+
+        <EditText
+            android:id="@+id/hmct_txtThoiGian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_white"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/hmct_lableLoaiKC"
+            android:hint="Nhập thời gian..."
+            android:textSize="8pt"
+            android:gravity="center"
+            android:layout_below="@+id/hmct_lableHanMuc"/>
+        <Button
+            android:id="@+id/hmct_btnThem"
+            android:layout_width="300dp"
+            android:background="@drawable/custorm_buttom_2"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:text="Thêm"
+            android:textSize="8pt"
+            android:textColor="@color/white"
+            android:layout_below="@+id/hmct_lableThoiGian"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/hmct_label_ListHanMucCT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hmct_top"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:id="@+id/pnRowTiitle">
+
+            <TextView
+                android:id="@+id/hmct_label_txtLoaiKC"
+                android:background="@drawable/border_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loại"
+                android:textColor="@color/rose"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textSize="7pt" />
+
+            <TextView
+                android:id="@+id/hmct_label_txtKhoanChi"
+                android:background="@drawable/border_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khoản chi"
+                android:textColor="@color/red"
+                android:textSize="7pt"
+                android:layout_toRightOf="@+id/hmct_label_txtLoaiKC"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <TextView
+                android:id="@+id/hmct_label_txtHanMuc"
+                android:background="@drawable/border_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hạn mức"
+                android:textSize="7pt"
+                android:textColor="@color/yellow"
+                android:layout_toRightOf="@+id/hmct_label_txtKhoanChi"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <TextView
+                android:id="@+id/hmct_label_txtTgian"
+                android:background="@drawable/border_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="7pt"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/hmct_label_txtHanMuc"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hmct_ListHanMucChiTieu"
+            android:background="@drawable/border_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:layout_below="@id/pnRowTiitle"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

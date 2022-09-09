@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacground_nen1"
+    tools:context=".DoanhThuFragment">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/xanhngoc"
+        android:text="Doanh Thu"
+        android:gravity="bottom|center"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="1dp"
+        android:paddingRight="20dp"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:id="@+id/lblTittle"
+        ></TextView>
+    <RelativeLayout
+        android:id="@+id/doanhThu_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTittle"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/doanhThu_lableTenVi"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Tên ví:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/mometum"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/doanhThu_container_dropdownTenVi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/background_white"
+            android:layout_toRightOf="@id/doanhThu_lableTenDT"
+            android:hint="@string/select"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/doanhThu_dropdownTenVi"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/mometum"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/doanhThu_lableLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Loại:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/rose"
+            android:layout_below="@+id/doanhThu_lableTenVi"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/doanhThu_container_dropdownLoai"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/doanhThu_lableTenDT"
+            android:background="@drawable/background_white"
+            android:layout_below="@+id/doanhThu_container_dropdownTenVi"
+            android:hint="@string/select"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/doanhThu_dropdownLoai"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/rose"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/doanhThu_lableTenLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Tên loại:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/rose"
+            android:layout_below="@+id/doanhThu_lableLoai"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/doanhThu_container_dropdownTenLoai"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/doanhThu_lableTenDT"
+            android:background="@drawable/background_white"
+            android:layout_below="@+id/doanhThu_container_dropdownLoai"
+            android:hint="@string/select"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/doanhThu_dropdownTenLoai"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/rose"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/doanhThu_lableTenDT"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Tên doanh thu:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_below="@+id/doanhThu_lableTenLoai"/>
+
+        <EditText
+            android:id="@+id/doanhThu_txtTenDT"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_white"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/doanhThu_lableTenDT"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:hint="Tên doanh thu..."
+            android:layout_below="@+id/doanhThu_container_dropdownTenLoai"/>
+
+        <TextView
+            android:id="@+id/doanhThu_lableSoTien"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Số tiền:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/xanhngoc"
+            android:layout_below="@+id/doanhThu_lableTenDT"/>
+
+        <EditText
+            android:id="@+id/doanhThu_txtSoTien"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_white"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/doanhThu_lableTenDT"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textColor="@color/xanhngoc"
+            android:hint="Số tiền..."
+            android:layout_below="@+id/doanhThu_txtTenDT"/>
+
+        <TextView
+            android:id="@+id/doanhThu_lableThoiGian"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Thời gian:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@+id/doanhThu_lableSoTien"/>
+
+        <EditText
+            android:id="@+id/doanhThu_txtThoiGian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_white"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/doanhThu_lableTenDT"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:hint="Nhập thời gian..."
+            android:layout_below="@+id/doanhThu_txtSoTien"/>
+        <Button
+            android:id="@+id/doanhThu_btnThem"
+            android:layout_width="300dp"
+            android:background="@drawable/custorm_buttom_2"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:text="Thêm"
+            android:textSize="8pt"
+            android:textColor="@color/white"
+            android:layout_below="@+id/doanhThu_lableThoiGian"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/doanhThu_label_ListDoanhThu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doanhThu_top"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:id="@+id/pnRowTiitle">
+
+            <TextView
+                android:id="@+id/doanhThu_label_txtSTT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STT"
+                android:textColor="@color/rose"
+                android:gravity="center"
+                android:background="@drawable/border_text"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="8pt" />
+
+            <TextView
+                android:id="@+id/doanhThu_label_txtTenDT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên doanh thu"
+                android:textColor="@color/red"
+                android:textSize="8pt"
+                android:layout_toRightOf="@+id/doanhThu_label_txtSTT"
+                android:gravity="center"
+                android:background="@drawable/border_text"
+                android:textStyle="bold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <TextView
+                android:id="@+id/doanhThu_label_txtSoTien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số tiền"
+                android:textSize="8pt"
+                android:textColor="@color/xanhngoc"
+                android:layout_toRightOf="@+id/doanhThu_label_txtTenDT"
+                android:gravity="center"
+                android:background="@drawable/border_text"
+                android:textStyle="bold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <TextView
+                android:id="@+id/doanhThu_label_txtThoiGian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="8pt"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/doanhThu_label_txtSoTien"
+                android:gravity="center"
+                android:background="@drawable/border_text"
+                android:textStyle="bold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+        </LinearLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/doanhThu_ListDoanhThu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_text"
+
+            android:paddingTop="10dp"
+            android:layout_below="@id/pnRowTiitle"/>
+    </RelativeLayout>
+
+</RelativeLayout>

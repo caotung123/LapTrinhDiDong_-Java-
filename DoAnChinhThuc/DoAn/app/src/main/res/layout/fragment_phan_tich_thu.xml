@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhanTichThuFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phanTichThu_container_dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="50dp"
+        android:hint="@string/select"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/phanTichThu_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#92978C"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/phanTichThu_barchart"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/phanTichThu_container_dropdown"/>
+
+</RelativeLayout>

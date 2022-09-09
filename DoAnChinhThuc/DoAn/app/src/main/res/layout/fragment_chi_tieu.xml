@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacground_nen1"
+    tools:context=".ChiTieuFragment">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/xanhngoc"
+        android:text="Chi Tiêu"
+        android:gravity="bottom|center"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="1dp"
+        android:paddingRight="20dp"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:id="@+id/lblTittle"
+        ></TextView>
+    <RelativeLayout
+        android:id="@+id/chiTieu_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTittle"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/chiTieu_lableTenVi"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Tên ví:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/mometum"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/chiTieu_container_dropdownTenVi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/background_white"
+            android:layout_toRightOf="@id/chiTieu_lableTenCT"
+            android:hint="@string/select"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/chiTieu_dropdownTenVi"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/mometum"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/chiTieu_lableLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Loại:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/rose"
+            android:layout_below="@+id/chiTieu_lableTenVi"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/chiTieu_container_dropdownLoai"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/background_white"
+            android:layout_toRightOf="@id/chiTieu_lableTenCT"
+            android:layout_below="@+id/chiTieu_container_dropdownTenVi"
+            android:hint="@string/select"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/chiTieu_dropdownLoai"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/rose"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/chiTieu_lableTenLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Tên loại:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/rose"
+            android:layout_below="@+id/chiTieu_lableLoai"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/chiTieu_container_dropdownTenLoai"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/background_white"
+            android:layout_toRightOf="@id/chiTieu_lableTenCT"
+            android:layout_below="@+id/chiTieu_container_dropdownLoai"
+            android:hint="@string/select"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/chiTieu_dropdownTenLoai"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/rose"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/chiTieu_lableTenCT"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Tên chi tiêu:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_below="@+id/chiTieu_lableTenLoai"/>
+
+        <EditText
+            android:id="@+id/chiTieu_txtTenCT"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_white"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/chiTieu_lableTenCT"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:hint="Tên doanh thu..."
+            android:textColor="@color/red"
+            android:layout_below="@+id/chiTieu_container_dropdownTenLoai"/>
+
+        <TextView
+            android:id="@+id/chiTieu_lableSoTien"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Số tiền:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/xanhngoc"
+            android:layout_below="@+id/chiTieu_lableTenCT"/>
+
+        <EditText
+            android:id="@+id/chiTieu_txtSoTien"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_white"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/chiTieu_lableTenCT"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:hint="Số tiền..."
+            android:textColor="@color/xanhngoc"
+            android:layout_below="@+id/chiTieu_txtTenCT"/>
+
+        <TextView
+            android:id="@+id/chiTieu_lableThoiGian"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Thời gian:"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@+id/chiTieu_lableSoTien"/>
+
+        <EditText
+            android:id="@+id/chiTieu_txtThoiGian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_white"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/chiTieu_lableTenCT"
+            android:textSize="8pt"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:hint="Nhập thời gian..."
+            android:layout_below="@+id/chiTieu_txtSoTien"/>
+
+        <Button
+            android:id="@+id/chiTieu_btnThem"
+            android:layout_width="300dp"
+            android:background="@drawable/custorm_buttom_2"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:text="Thêm"
+            android:textSize="8pt"
+            android:textColor="@color/white"
+            android:layout_below="@+id/chiTieu_lableThoiGian"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/chiTieu_label_ListChiTieu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chiTieu_top"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:id="@+id/pnRowTiitle">
+
+            <TextView
+                android:id="@+id/chiTieu_label_txtSTT"
+                android:background="@drawable/border_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loại"
+                android:textColor="@color/rose"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textSize="8pt" />
+
+            <TextView
+                android:id="@+id/chiTieu_label_txtTenCT"
+                android:background="@drawable/border_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khoản chi"
+                android:textColor="@color/red"
+                android:textSize="8pt"
+                android:layout_toRightOf="@+id/chiTieu_label_txtSTT"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <TextView
+                android:id="@+id/chiTieu_label_txtSoTien"
+                android:background="@drawable/border_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hạn mức"
+                android:textSize="8pt"
+                android:textColor="@color/yellow"
+                android:layout_toRightOf="@+id/chiTieu_label_txtTenCT"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <TextView
+                android:id="@+id/chiTieulabel_txtThoiGian"
+                android:background="@drawable/border_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="8pt"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/chiTieulabel_txtThoiGian"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chiTieu_ListChiTieu"
+            android:background="@drawable/border_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:layout_below="@id/pnRowTiitle"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

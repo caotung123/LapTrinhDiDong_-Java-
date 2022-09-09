@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemDoanhThu">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:id="@+id/pnRowTiitle">
+
+        <TextView
+            android:id="@+id/itemDoanhThu_txtSTT"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="STT"
+            android:textColor="@color/rose"
+            android:gravity="center"
+            android:textSize="8pt" />
+
+        <TextView
+            android:id="@+id/itemDoanhThu_txtTenDT"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Tên doanh thu"
+            android:textColor="@color/red"
+            android:textSize="8pt"
+            android:layout_toRightOf="@+id/itemDoanhThu_txtSTT"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <TextView
+            android:id="@+id/itemDoanhThu_txtSoTien"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Số tiền"
+            android:textSize="8pt"
+            android:textColor="@color/yellow"
+            android:layout_toRightOf="@+id/itemDoanhThu_txtTenDT"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <TextView
+            android:id="@+id/itemDoanhThu_txtThoiGian"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Thời gian"
+            android:textSize="8pt"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/itemDoanhThu_txtSoTien"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_below="@id/pnRowTiitle"/>
+
+
+</RelativeLayout>

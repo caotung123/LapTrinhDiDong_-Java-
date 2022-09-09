@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        ></RelativeLayout>
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sothuchi_misa"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imgMISA"
+        ></ImageView>
+    <TextView
+        android:id="@+id/labelDangNhap"
+        android:layout_below="@id/imgMISA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sổ Thu Chi MISA"
+        android:textSize="7pt"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/pnSDT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelDangNhap">
+
+        <EditText
+            android:id="@+id/txtSDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/custtom_edittextt"
+            android:hint="Nhập số điện thoại..."
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="70dp"
+            android:textSize="8pt" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_deleteall"
+            android:layout_alignRight="@id/txtSDT"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/btnDeleteTenTK"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/pnMatKhau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pnSDT"
+        >
+
+        <EditText
+            android:id="@+id/txtMatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/custtom_edittextt"
+            android:hint="Nhập mật khẩu..."
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingRight="70dp"
+            android:paddingBottom="5dp"
+            android:password="true"
+            android:textSize="8pt" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_visibility_off"
+            android:layout_alignRight="@id/txtMatKhau"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/btnHienThiMK"/>
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cbRemember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pnMatKhau"
+        android:layout_marginLeft="20dp"
+        android:padding="12dp"
+        android:textSize="8pt"
+        android:text="Nhớ mật khẩu">
+    </CheckBox>
+
+    <Button
+        android:id="@+id/btnDangNhap"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbRemember"
+        android:text="Đăng nhập"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:textSize="7pt"
+        android:background="@drawable/custorm_buttom_1"
+        />
+
+    <Button
+        android:id="@+id/btnDangKy"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDangNhap"
+        android:text="ĐĂNG KÝ"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:textSize="7pt"
+        android:background="@drawable/custorm_buttom_2"
+        />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDangKy"
+        android:layout_alignLeft="@id/btnDangNhap"
+        android:layout_marginTop="10dp"
+        android:text="Quên mật khẩu?"
+        android:textColor="#0A78EC"
+        android:textSize="6pt"
+        android:id="@+id/lblQuenMK"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDangKy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="Hoặc đăng nhập bằng"
+        android:textColor="@color/black"
+        android:textSize="6pt"
+        android:id="@+id/lblDangNhapKhac"
+        />
+    <RelativeLayout
+        android:id="@+id/pnDangNhapKhac"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/lblDangNhapKhac">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/facebook_2"
+            android:id="@+id/btnFacebook"
+            ></ImageView>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/google"
+            android:id="@+id/btnGoogle"
+            ></ImageView>
+    </RelativeLayout>
+
+</RelativeLayout>

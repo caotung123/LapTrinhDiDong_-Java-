@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacground_nen1"
+    tools:context=".BaoCaoFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/xanhngoc"
+        android:text="Báo Cáo"
+        android:gravity="bottom|center"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="1dp"
+        android:paddingRight="20dp"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:id="@+id/lblBaoCao"
+        ></TextView>
+    <RelativeLayout
+        android:id="@+id/baocao_itemPhanTichChi"
+        android:background="@drawable/background_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/lblBaoCao"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/baocao_imgPhanTichChi"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_graph_do"
+            android:foregroundGravity="center"/>
+        <TextView
+            android:id="@+id/baocao_txtPhanTichChi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16pt"
+            android:layout_toRightOf="@id/baocao_imgPhanTichChi"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="Phân Tích Chi"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/baocao_itemPhanTichThu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_white"
+        android:layout_below="@+id/baocao_itemPhanTichChi">
+
+        <ImageView
+            android:id="@+id/baocao_imgPhanTichThu"
+            android:layout_marginLeft="10dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_graph_xanh"
+            android:foregroundGravity="center"/>
+
+        <TextView
+            android:id="@+id/baocao_txtPhanTichThu"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/baocao_imgPhanTichThu"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16pt"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="Phân Tích Thu"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+</RelativeLayout>

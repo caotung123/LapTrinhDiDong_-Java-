@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:id="@+id/itemLoaiDoanhThu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:id="@+id/pnRowTiitle">
+        <TextView
+            android:id="@+id/itemLoaiDoanhThu_txtLoaiDT"
+
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Loại  DT"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/rose"
+            android:textSize="12pt" />
+        <TextView
+            android:id="@+id/itemLoaiDoanhThu_txtTenDT"
+
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="Tên Doanh Thu"
+            android:textColor="@color/green"
+            android:textSize="12pt"
+            android:layout_toRightOf="@+id/itemLoaiDoanhThu_txtLoaiDT"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_below="@id/pnRowTiitle"/>
+
+
+
+</RelativeLayout>

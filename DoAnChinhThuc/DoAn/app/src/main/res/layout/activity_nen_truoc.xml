@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NenTruoc">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:background="@drawable/giaodienmisa"
+        android:id="@+id/pnTop"
+        ></RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="7pt"
+        android:text="Chào mừng đến với\n Sổ Thu Chi MISA\n Trải nghiệm niềm vui quản lý tài chính băng \n việc đăng ký trong lần đâu sử dụng"
+        android:textColor="@color/textNormal"
+        android:gravity="center"
+        android:layout_below="@id/pnTop"
+        android:id="@+id/lblChaoMung"
+        ></TextView>
+
+    <Button
+        android:id="@+id/btnOpen"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/lblChaoMung"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:background="@drawable/custorm_buttom_1"
+        android:padding="9dp"
+        android:text="OPEN"
+        android:textSize="7pt" />
+</RelativeLayout>

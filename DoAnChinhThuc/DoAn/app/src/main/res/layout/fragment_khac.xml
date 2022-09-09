@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KhacFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/khac_itemSettings"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/khac_imgSettings"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_settings"
+            android:foregroundGravity="center"/>
+
+        <TextView
+            android:id="@+id/khac_txtSettings"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:textSize="16pt"
+            android:text="Cài đặt chung"
+            android:paddingLeft="40dp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/khac_itemDangXuat"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/khac_itemSettings">
+
+        <ImageView
+            android:id="@+id/khac_imgDangXuat"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic__output"
+            android:foregroundGravity="center"/>
+
+        <TextView
+            android:id="@+id/khac_txtDangXuat"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:textSize="16pt"
+            android:text="Đăng xuất"
+            android:paddingLeft="40dp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+</RelativeLayout>

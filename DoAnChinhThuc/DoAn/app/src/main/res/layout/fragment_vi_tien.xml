@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacground_nen1"
+    tools:context=".ViTienFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/xanhngoc"
+        android:text="Ví Tiền"
+        android:gravity="bottom|center"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="1dp"
+        android:paddingRight="20dp"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:id="@+id/lblTittle"
+        ></TextView>
+    <EditText
+        android:id="@+id/viTien_txtTenVi"
+        android:background="@drawable/background_white"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Tên ví tiền"
+        android:textSize="12pt"
+        android:gravity="center"
+        android:textColor="@color/mometum"
+        android:layout_below="@+id/lblTittle"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/viTien_btnThem"
+        android:layout_width="300dp"
+        android:background="@drawable/custorm_buttom_2"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        android:text="Thêm"
+        android:textSize="8pt"
+        android:textColor="@color/white"
+        android:layout_below="@+id/viTien_txtTenVi"/>
+
+
+    <RelativeLayout
+        android:id="@+id/viTien_label_ListViTien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/viTien_btnThem"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:id="@+id/pnRowTiitle">
+
+            <TextView
+                android:id="@+id/viTien_label_txtSTT"
+                android:background="@drawable/border_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STT"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="12pt" />
+
+            <TextView
+                android:id="@+id/viTien_label_txtTenVi"
+                android:background="@drawable/border_text"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Tên ví"
+                android:textColor="@color/mometum"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="12pt"
+                android:layout_toRightOf="@+id/viTien_label_txtSTT"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+            <TextView
+                android:id="@+id/viTien_label_txtSoDu"
+                android:background="@drawable/border_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số dư"
+                android:textColor="@color/xanhngoc"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="12pt"
+                android:layout_toRightOf="@+id/viTien_label_txtTenVi"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viTien_ListViTien"
+            android:background="@drawable/border_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/pnRowTiitle"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

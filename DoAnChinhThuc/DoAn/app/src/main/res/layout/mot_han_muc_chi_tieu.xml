@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:id="@+id/itemHanMucChiTieu">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:id="@+id/pnRowTiitle">
+    <TextView
+        android:id="@+id/itemHanMucChiTieu_txtLoaiKC"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Loại"
+        android:textColor="@color/rose"
+        android:gravity="center"
+        android:textSize="8pt" />
+
+    <TextView
+        android:id="@+id/itemHanMucChiTieu_txtKhoanChi"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:text="Khoản chi"
+        android:textColor="@color/red"
+        android:textSize="8pt"
+        android:layout_toRightOf="@+id/itemHanMucChiTieu_txtLoaiKC"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/itemHanMucChiTieu_txtHanMuc"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Hạn mức"
+        android:textSize="8pt"
+        android:textColor="@color/xanhngoc"
+        android:layout_toRightOf="@+id/itemHanMucChiTieu_txtKhoanChi"
+        android:gravity="center"
+
+        android:paddingRight="5dp" />
+
+    <TextView
+        android:id="@+id/itemHanMucChiTieu_txtTgian"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Thời gian"
+        android:textSize="8pt"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/itemHanMucChiTieu_txtHanMuc"
+        android:gravity="center"
+        android:paddingRight="5dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_below="@id/pnRowTiitle"/>
+
+</RelativeLayout>

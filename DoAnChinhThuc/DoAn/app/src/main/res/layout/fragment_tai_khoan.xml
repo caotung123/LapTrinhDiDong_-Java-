@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaiKhoanFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/taikhoan_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/icon_nam"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        tools:ignore="MissingClass"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/taikhoan_img"
+        android:id="@+id/pnThongTin"
+        android:layout_margin="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên hiển thị"
+            android:textColor="@color/textNormal"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:id="@+id/taikhoan_labelHoTen"
+            />
+        <EditText
+            android:id="@+id/taikhoan_txtHoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:layout_below="@id/taikhoan_labelHoTen"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="70dp"
+            android:textSize="8pt" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/textNormal"
+            android:layout_below="@+id/taikhoan_txtHoTen"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:id="@+id/taikhoan_labelEmail"
+            />
+        <EditText
+            android:id="@+id/taikhoan_txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:layout_below="@id/taikhoan_labelEmail"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="70dp"
+            android:textSize="8pt" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số điện thoại"
+            android:textColor="@color/textNormal"
+            android:layout_below="@id/taikhoan_txtEmail"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:id="@+id/taikhoan_labelSDT"
+            />
+        <EditText
+            android:id="@+id/taikhoan_txtSDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:layout_below="@id/taikhoan_labelSDT"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="70dp"
+            android:textSize="8pt" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mật khẩu"
+            android:textColor="@color/textNormal"
+            android:layout_below="@id/taikhoan_txtSDT"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:id="@+id/taikhoan_labeMatKhau"
+            />
+        <EditText
+            android:id="@+id/taikhoan_txtMatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:layout_below="@id/taikhoan_labeMatKhau"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="70dp"
+            android:inputType="textPassword"
+            android:textSize="8pt" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận mật khẩu"
+            android:textColor="@color/textNormal"
+            android:layout_below="@id/taikhoan_txtMatKhau"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:id="@+id/taikhoan_labelXNMatKhau"
+            />
+        <EditText
+            android:id="@+id/taikhoan_txtXNMatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:layout_below="@id/taikhoan_labelXNMatKhau"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="70dp"
+            android:inputType="textPassword"
+            android:textSize="8pt" />
+
+        <Button
+            android:id="@+id/taikhoan_btnSua"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/taikhoan_txtXNMatKhau"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/custorm_buttom_1"
+            android:padding="9dp"
+            android:text="Cập nhật"
+            android:textSize="7pt" />
+    </RelativeLayout>
+
+</RelativeLayout>
